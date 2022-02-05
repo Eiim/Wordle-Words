@@ -87,7 +87,7 @@ document.getElementById("englishin").addEventListener("input", function() {
 });
 document.getElementById("wordlein").addEventListener("input", function() {
 	var wordle = document.getElementById("wordlein").value;
-	wordle = wordle.replace(/[^🟨🟩⬛]/g, '');
+	wordle = wordle.replace(/[^🟨🟩⬛⬜]/g, '');
 	wordle = [...wordle]
 	
 	var out = "";
@@ -101,15 +101,15 @@ document.getElementById("wordlein").addEventListener("input", function() {
 		var v2;
 		var v3;
 		
-		if(c1 == "⬛") {v1 = 0}
+		if(c1 == "⬛" || c1 == "⬜") {v1 = 0}
 		else if(c1 == "🟨") {v1 = 1}
 		else {v1 = 2}
 		
-		if(c2 == "⬛") {v2 = 0}
+		if(c2 == "⬛" || c2 == "⬜") {v2 = 0}
 		else if(c2 == "🟨") {v2 = 1}
 		else {v2 = 2}
 		
-		if(c3 == "⬛") {v3 = 0}
+		if(c3 == "⬛" || c3 == "⬜") {v3 = 0}
 		else if(c3 == "🟨") {v3 = 1}
 		else {v3 = 2}
 		
